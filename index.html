@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./clock.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+  </head>
+  <body>
+    <div id="app">
+      <section id="clock" class="area">
+        <p class="crt-time">Current Time</p>
+        <div class="current-clock">
+          <p class="current-time" id="current-time"></p>
+
+          <p class="current-date" id="current-date"></p>
+        </div>
+
+        <nav class="clock-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Current Time</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./alarm.html">Alarm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./stopwatch.html">Stopwatch</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+
+    <script src="/currentTime.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

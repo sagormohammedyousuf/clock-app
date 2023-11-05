@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/clock.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Clock</title>
+  </head>
+  <body>
+    <div id="app">
+      <section id="clock" class="stop-section">
+        <div class="stop-watch">
+          <p class="stop-title">Stop Watch</p>
+          <p class="stop-time">00:00:00</p>
+
+          <div class="btn-list">
+            <button id="button-start" class="stop-btn">Start</button>
+            <button id="button-stop" class="stop-btn" disabled>Stop</button>
+            <button id="button-reset" class="stop-btn" disabled>Reset</button>
+          </div>
+        </div>
+
+        <nav class="clock-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Current Time</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./alarm.html">Alarm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./stopwatch.html">Stopwatch</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

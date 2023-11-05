@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;700&family=Kumbh+Sans:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Overpass:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Raleway:wght@400;700&family=Red+Hat+Display:wght@400;500;600;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,500&display=swap");
+
+:root {
+  --app-clr: #f7f7f7;
+  --txt-clr-light: #fff;
+  --txt-clr-dark: #1f1d1d;
+  --txt-clr-neutral: #6b6b66;
+  --txt-clr-hover: ##8a58d8;
+  --btn-clr: #713abe;
+  --btn-hover-clr: #c384fd;
+
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  transition: width 0.3s;
+  -webkit-transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  -ms-transition: width 0.3s;
+  -o-transition: width 0.3s;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: var(--txt-clr-dark);
+}
+
+#app {
+  background: #6b6b66;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#clock {
+  width: 20vw;
+  height: 70vh;
+  background: var(--app-clr);
+
+  position: relative;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    height: 85dvh;
+  }
+}
+
+/* style for current date and time */
+
+.crt-time {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  color: var(--btn-hover-clr);
+}
+.current-clock {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-time {
+  font-size: 2rem;
+  color: var(--txt-clr-dark);
+}
+
+.current-date {
+  display: block;
+  color: #1f1d1d;
+}
+
+/* style for app navbar  */
+
+.clock-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.nav-item {
+  list-style: none;
+
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.nav-item a {
+  color: var(--txt-clr-neutral);
+  text-decoration: none;
+}
+
+.active {
+  color: var(--btn-clr) !important;
+  border-bottom: 2px dotted var(--btn-clr);
+}
+
+.nav-link:hover {
+  color: var(--btn-clr);
+  border-bottom: 2px dotted var(--btn-clr);
+}
+
+/* style for  alarm section  */
+.alarm {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.alarm-nav {
+  width: 100%;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem;
+  color: var(--txt-clr-dark);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--btn-hover-clr);
+}
+
+.alarm-button-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alarm-button-list button {
+  background: none;
+  border: none;
+  outline: none;
+  padding-left: 1.3rem;
+  cursor: pointer;
+}
+
+.alarm-button-list button img {
+  width: 30px;
+}
+
+.delete-btn {
+  margin-top: 0.3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  display: none;
+  width: 150px;
+  padding: 0.8rem;
+  background: #ffffff;
+  font-size: 1rem;
+  border-radius: 10vmax;
+  -webkit-border-radius: 10vmax;
+  -moz-border-radius: 10vmax;
+  -ms-border-radius: 10vmax;
+  -o-border-radius: 10vmax;
+}
+
+.alarm-clock-img {
+  margin-top: 2rem;
+  width: 100px;
+}
+
+.set-alarm {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.time {
+  color: var(--txt-clr-dark);
+  font-size: 1.8rem;
+}
+
+.select-option {
+  margin-block: 2rem;
+}
+
+select {
+  color: #696966;
+  width: 80px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: none;
+  outline: none;
+  border: 1px solid #adadaa;
+}
+
+.set-alarm-btn {
+  width: 65%;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: var(--btn-clr);
+  color: var(--txt-clr-light);
+  border: none;
+
+  border-radius: 10vmax;
+  -webkit-border-radius: 10vmax;
+  -moz-border-radius: 10vmax;
+  -ms-border-radius: 10vmax;
+  -o-border-radius: 10vmax;
+}
+
+.set-alarm-btn:hover {
+  background: var(--btn-hover-clr);
+  color: #ffffff;
+}
+
+/* style for stop watch */
+
+.stop-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--btn-hover-clr) !important;
+}
+
+.stop-section {
+  display: flex;
+}
+
+.stop-time {
+  color: var(--txt-clr-dark);
+  font-size: 2rem;
+}
+
+.stop-watch {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.stop-btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 00;
+  background: var(--btn-clr);
+  color: var(--txt-clr-light);
+  border: none;
+
+  border-radius: 10vmax;
+  -webkit-border-radius: 10vmax;
+  -moz-border-radius: 10vmax;
+  -ms-border-radius: 10vmax;
+  -o-border-radius: 10vmax;
+}
+
+.stop-btn:hover {
+  background: var(--btn-hover-clr);
+}

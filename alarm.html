@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/clock.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Clock</title>
+  </head>
+  <body>
+    <div id="app">
+      <section class="alarm area" id="clock">
+        <div class="alarm-nav">
+          <span class="title">Alarm</span>
+          <div class="alarm-button-list">
+            <button class="add-btn">
+              <img src="./public/add.svg" />
+            </button>
+            <button class="more-btn" id="more-btn">
+              <img src="./public/more.svg" />
+
+              <!-- aftar click  -->
+              <div class="delete-btn" id="delete-btn">Delete</div>
+            </button>
+          </div>
+        </div>
+
+        <div class="set-alarm">
+          <img class="alarm-clock-img" src="./public/alarm-clock.svg" />
+          <p class="time">
+            <span class="hour">04</span>
+            :<span class="min">36</span> :<span>44</span>
+            <span class="format">PM</span>
+          </p>
+          <div class="select-option">
+            <select type="text" class="select-hour">
+              <option>Hour</option>
+            </select>
+
+            <select class="select-min">
+              <option>Min</option>
+            </select>
+
+            <select class="select-format">
+              <option>AM/PM</option>
+            </select>
+          </div>
+
+          <button class="set-alarm-btn">Set Alarm</button>
+        </div>
+
+        <nav class="clock-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Current Time</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./alarm.html">Alarm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./stopwatch.html">Stopwatch</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+
+    <script src="./alarm.js"></script>
+    <!-- <script type="module" src="/main.js"></script> -->
+  </body>
+</html>
