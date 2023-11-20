@@ -9,13 +9,35 @@
   </head>
   <body>
     <div id="app">
+      
       <section class="alarm area" id="clock">
+
+    
+        <header>
+          <div class="top-nav">
+            <p class="top-nav-time time" id="top-nav-time" ></p>
+            <ul>
+              <li>
+                <img src="public/wifi.svg">
+              </li>
+              <li>
+                <img src="public/signal.svg">
+              </li>
+              <li class="bettery">
+              
+                <img src="public/battery.svg">
+              </li>
+              <li></li>
+            </ul>
+          </div>
+        </header>
+
         <div class="alarm-nav">
           <span class="title">Alarm</span>
           <div class="alarm-button-list">
-            <button class="add-btn">
+            <!-- <button class="add-btn">
               <img src="./public/add.svg" />
-            </button>
+            </button> -->
             <button class="more-btn" id="more-btn">
               <img src="./public/more.svg" />
 
@@ -27,24 +49,28 @@
 
         <div class="set-alarm">
           <img class="alarm-clock-img" src="./public/alarm-clock.svg" />
-          <p class="time">
+          <!-- <p class="time">
             <span class="hour">04</span>
             :<span class="min">36</span> :<span>44</span>
             <span class="format">PM</span>
-          </p>
+          </p> -->
           <div class="select-option">
             <select type="text" class="select-hour">
-              <option>Hour</option>
+              <option>--</option>
             </select>
 
             <select class="select-min">
-              <option>Min</option>
+              <option>--</option>
             </select>
 
             <select class="select-format">
               <option>AM/PM</option>
             </select>
           </div>
+          <span id="or">OR</span>
+
+          <input class="alarm-input" type="number" id="hourInput" placeholder="Hour" min="1" max="12">
+          <input class="alarm-input" type="number" id="minuteInput" placeholder="Minute" min="0" max="59">
 
           <button class="set-alarm-btn">Set Alarm</button>
         </div>
@@ -60,12 +86,16 @@
             <li class="nav-item">
               <a class="nav-link" href="./stopwatch.html">Stopwatch</a>
             </li>
+            <li class="nav-item">
+              <a href="./timer.html">Timer</a>
+            </li>
           </ul>
         </nav>
       </section>
     </div>
 
     <script src="./alarm.js"></script>
+    
     <!-- <script type="module" src="/main.js"></script> -->
   </body>
 </html>

@@ -10,9 +10,42 @@
   <body>
     <div id="app">
       <section id="clock" class="stop-section">
+
+        <header>
+          <div class="top-nav">
+            <p class="top-nav-time" id="current-time"></p>
+            <ul>
+              <li>
+                <img src="public/wifi.svg">
+              </li>
+              <li>
+                <img src="public/signal.svg">
+              </li>
+              <li class="bettery">
+              
+                <img src="public/battery.svg">
+              </li>
+              <li></li>
+            </ul>
+          </div>
+        </header>
+
+        <div class="alarm-nav">
+          <span class="title">Stopwatch</span>
+          <div class="alarm-button-list">
+            
+            <button class="more-btn" id="more-btn">
+              <img src="./public/more.svg" />
+
+              <!-- aftar click  -->
+              <div class="delete-btn" id="delete-btn">Delete</div>
+            </button>
+          </div>
+        </div>
+
         <div class="stop-watch">
-          <p class="stop-title">Stop Watch</p>
-          <p class="stop-time">00:00:00</p>
+          
+          <p class="stop-time">--:--:--</p>
 
           <div class="btn-list">
             <button id="button-start" class="stop-btn">Start</button>
@@ -20,6 +53,8 @@
             <button id="button-reset" class="stop-btn" disabled>Reset</button>
           </div>
         </div>
+
+        
 
         <nav class="clock-nav">
           <ul class="nav-list">
@@ -32,11 +67,16 @@
             <li class="nav-item">
               <a class="nav-link active" href="./stopwatch.html">Stopwatch</a>
             </li>
+            <li class="nav-item">
+              <a href="./timer.html">Timer</a>
+            </li>
           </ul>
         </nav>
       </section>
     </div>
 
+    
     <script type="module" src="/main.js"></script>
+    
   </body>
 </html>

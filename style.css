@@ -55,6 +55,7 @@ body {
   width: 20vw;
   height: 70vh;
   background: var(--app-clr);
+  background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
 
   position: relative;
 
@@ -84,7 +85,7 @@ body {
 }
 
 .current-time {
-  font-size: 2rem;
+  font-size: 4rem;
   color: var(--txt-clr-dark);
 }
 
@@ -143,18 +144,18 @@ body {
 
 .alarm-nav {
   width: 100%;
-  height: 4rem;
+ 
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.4rem;
+  
   color: var(--txt-clr-dark);
 }
 
 .title {
-  font-size: 1.5rem;
-  color: var(--btn-hover-clr);
+  width: 30px;
+  color: var(--txt-clr-dark);
 }
 
 .alarm-button-list {
@@ -200,7 +201,7 @@ body {
 
 .set-alarm {
   width: 100%;
-  height: 50%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,7 +224,7 @@ select {
   font-size: 1rem;
   background: none;
   outline: none;
-  border: 1px solid #adadaa;
+  border: 1px solid #f0f0e7;
 }
 
 .set-alarm-btn {
@@ -247,16 +248,22 @@ select {
   color: #ffffff;
 }
 
+.alarm-input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background:none;
+  border: 1px solid #f0f0e7;
+  outline: none;
+}
 /* style for stop watch */
 
-.stop-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--btn-hover-clr) !important;
-}
+
+
 
 .stop-section {
   display: flex;
+  flex-direction: column;
+
 }
 
 .stop-time {
@@ -266,6 +273,7 @@ select {
 
 .stop-watch {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -290,4 +298,64 @@ select {
 
 .stop-btn:hover {
   background: var(--btn-hover-clr);
+}
+
+
+
+
+/* css for top nav  */
+header {
+  width: 100%;
+}
+
+.top-nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.top-nav-time {
+  font-size: 0.9rem;
+  padding-left: 3px;
+}
+
+.top-nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.top-nav ul li {
+  list-style:  none;
+  padding-left: 3px;
+  font-size: 0.7rem;
+}
+
+.battery {
+  display: flex;
+  align-items: center;
+}
+
+.top-nav ul li img {
+  width: 0.9rem;
+  
+}
+
+
+
+/* style for timer  */
+
+.timer-container {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+#count-down {
+  font-size: 2.2rem;
 }

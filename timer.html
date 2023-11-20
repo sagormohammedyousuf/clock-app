@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/clock.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Clock</title>
+  </head>
+  <body>
+    <div id="app">
+      <section id="clock">
+        <header>
+          <div class="top-nav">
+            <p class="top-nav-time" id="top-nav-time"></p>
+            <ul>
+              <li>
+                <img src="public/wifi.svg" />
+              </li>
+              <li>
+                <img src="public/signal.svg" />
+              </li>
+              <li class="bettery">
+                <img src="public/battery.svg" />
+              </li>
+            </ul>
+          </div>
+        </header>
+
+        <div class="alarm-nav">
+          <p class="title">Timer</p>
+          <div class="alarm-button-list">
+            
+            <button class="more-btn" id="more-btn">
+              <img src="./public/more.svg" />
+
+              <!-- aftar click  -->
+              <div class="delete-btn" id="delete-btn">Delete</div>
+            </button>
+          </div>
+        </div>
+
+
+
+        <div class="timer-container">
+          
+          <p id="count-down"></p>
+          <span>left to 2024</span>
+        </div>
+
+        <nav class="clock-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./index.html">Current Time</a>
+            </li>
+            <li class="nav-item">
+              <a href="./alarm.html">Alarm</a>
+            </li>
+            <li class="nav-item">
+              <a href="./stopwatch.html">Stopwatch</a>
+            </li>
+            <li class="nav-item">
+              <a href="./timer.html" class="active">Timer</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+
+    
+
+    <script>
+      // set the date we are counting down to //
+
+      let counttDown = new Date("Jan 1, 2024").getTime();
+
+      //upadate the countdown every 1 second //
+
+   
+      // current time and date //
+
+      function updateClock() {
+        const now = new Date();
+
+        // current time //
+        const hours = now.getHours();
+        const ampm = hours >= 12 ? "PM" : "AM";
+        const displayHours = (hours % 12 || 12).toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const timeSting = `${displayHours}:${minutes} ${ampm} `;
+        // showing date and time on display //
+        document.getElementById("top-nav-time").textContent = timeSting;
+
+
+      }
+      //update the clock every second //
+      setInterval(updateClock, 1000);
+      // update //
+      updateClock();
+
+
+
+
+
+
+
+// timer appp 
+
+
+
+
+
+
+
+ const countDownDate = new Date("Jan 1, 2024 ").getTime();
+
+// Update the count down every 1 second
+const x = setInterval(function() {
+
+  // Get today's date and time
+  const now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  const distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("count-down").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("count-down").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+
+    </script>
+  </body>
+</html>
